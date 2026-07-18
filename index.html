@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hashim Khan N - Backend Developer specializing in Java, Spring Boot, and cloud infrastructure.">
+    <meta name="keywords" content="Hashim Khan, Backend Developer, Java, Spring Boot, AWS, Microservices">
+    <meta name="author" content="Hashim Khan N">
+    <title>Hashim Khan N – Backend Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #e8e6f0;
+            background: linear-gradient(135deg, #0a0a0f 0%, #16121f 50%, #1e1530 100%);
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            width: 550px;
+            height: 550px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.18) 0%, transparent 70%);
+            border-radius: 50%;
+            top: -200px;
+            right: -180px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(168, 85, 247, 0.12) 0%, transparent 70%);
+            border-radius: 50%;
+            bottom: -280px;
+            left: -280px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            margin-bottom: 40px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(16px);
+            border-radius: 20px;
+            border: 1px solid rgba(168, 121, 247, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            line-height: 1.3;
+            background: linear-gradient(135deg, #e8e6f0 0%, #c4b5fd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: rgba(232, 230, 240, 0.7);
+            margin-bottom: 25px;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        .contact-info {
+            font-size: 14px;
+            color: rgba(232, 230, 240, 0.6);
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .contact-info a {
+            color: #c4b5fd;
+            text-decoration: none;
+            border-bottom: 1.5px solid rgba(196, 181, 253, 0.4);
+            transition: all 0.3s ease;
+            padding-bottom: 2px;
+        }
+
+        .contact-info a:hover {
+            color: #a78bfa;
+            border-bottom-color: #a78bfa;
+        }
+
+        section {
+            margin-bottom: 32px;
+            padding: 35px;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            border-radius: 16px;
+            border: 1px solid rgba(168, 121, 247, 0.14);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
+            transition: all 0.3s ease;
+        }
+
+        section:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(168, 121, 247, 0.25);
+        }
+
+        h2 {
+            font-size: 19px;
+            font-weight: 600;
+            margin-bottom: 22px;
+            color: #a78bfa;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            margin-top: 20px;
+            color: #e8e6f0;
+        }
+
+        .role-description {
+            color: rgba(232, 230, 240, 0.55);
+            font-size: 14px;
+            margin-bottom: 15px;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        li {
+            margin-bottom: 14px;
+            line-height: 1.7;
+            font-size: 15px;
+            color: rgba(232, 230, 240, 0.85);
+        }
+
+        li:before {
+            content: "→ ";
+            margin-right: 10px;
+            color: #a78bfa;
+            font-weight: 600;
+        }
+
+        .project {
+            margin-bottom: 25px;
+            padding: 24px;
+            background: rgba(255, 255, 255, 0.025);
+            border-radius: 14px;
+            border: 1px solid rgba(168, 121, 247, 0.12);
+            transition: all 0.3s ease;
+        }
+
+        .project:hover {
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(139, 92, 246, 0.15);
+        }
+
+        .project-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 17px;
+        }
+
+        .project-link {
+            color: #e8e6f0;
+            text-decoration: none;
+            border-bottom: 1.5px solid #a78bfa;
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: #c4b5fd;
+        }
+
+        .tech-stack {
+            font-size: 13px;
+            color: #a78bfa;
+            margin-bottom: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .project-description {
+            font-size: 15px;
+            margin-bottom: 0;
+            line-height: 1.7;
+            color: rgba(232, 230, 240, 0.75);
+        }
+
+        .skill-category {
+            margin-bottom: 16px;
+            font-size: 15px;
+            line-height: 1.7;
+            color: rgba(232, 230, 240, 0.85);
+        }
+
+        .skill-category strong {
+            display: inline-block;
+            min-width: 120px;
+            color: #c4b5fd;
+            font-weight: 600;
+        }
+
+        footer {
+            padding: 35px;
+            margin-top: 40px;
+            text-align: center;
+            color: rgba(232, 230, 240, 0.4);
+            font-size: 13px;
+            font-weight: 300;
+            background: rgba(255, 255, 255, 0.025);
+            backdrop-filter: blur(16px);
+            border-radius: 16px;
+            border: 1px solid rgba(168, 121, 247, 0.1);
+        }
+
+        a {
+            transition: all 0.3s ease;
+        }
+
+        .highlight {
+            background: rgba(167, 139, 250, 0.15);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            header {
+                padding: 30px;
+            }
+
+            section {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            h2 {
+                font-size: 17px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hashim Khan N</h1>
+            <p class="subtitle">Backend Developer building secure, scalable microservices. Passionate about game services infrastructure and cloud-native systems.</p>
+            <div class="contact-info">
+                <a href="mailto:hashimkhan1618@gmail.com">Email</a> | 
+                <a href="https://linkedin.com/in/hashim-khan-7b07b3223">LinkedIn</a> | 
+                <a href="https://github.com/itshashi7">GitHub</a>
+            </div>
+        </header>
+
+        <section>
+            <h2>What I Do</h2>
+            <p style="font-size: 15px; line-height: 1.7; margin-bottom: 15px;">I design and ship scalable backend microservices using Java and Spring Boot. I specialize in building secure, reliable systems that handle enterprise workloads. Over the past 2 years, I've worked across AWS, Azure, and GCP to connect enterprise infrastructure with cloud platforms, while maintaining high code quality and security standards.</p>
+            <p style="font-size: 15px; line-height: 1.7;">I'm particularly interested in game services architecture—building the backend systems millions of players depend on for reliability, security, and performance.</p>
+        </section>
+
+        <section>
+            <h2>Experience</h2>
+            
+            <div>
+                <h3>Tata Communications Ltd</h3>
+                <p class="role-description">Engineer – Backend Developer | July 2024 – Present</p>
+                
+                <ul>
+                    <li>Designed and shipped scalable microservices using Java and Spring Boot for IZO Multi Cloud Connect (IZO MCC), connecting enterprise infrastructure to AWS, Azure, and GCP</li>
+                    <li>Built robust REST APIs with proper exception handling, validation, and serialization to support high-frequency deployments</li>
+                    <li>Implemented security best practices: input validation, SQL injection prevention, and data encryption to protect user data</li>
+                    <li>Achieved 70%+ code coverage across microservices using SonarQube; continuously optimized database queries and API response times</li>
+                    <li>Worked across multiple cloud platforms to design secure connectivity patterns and engineered microservices for reliable cloud deployment</li>
+                    <li>Participated in CI/CD pipelines using Jenkins; collaborated with Product Owners and QA in Agile sprint cycles</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+            
+            <div class="project">
+                <div class="project-title">
+                    <a href="https://github.com/itshashi7/wiki_summarizer" class="project-link">Wikipedia Summarizer Web Application</a>
+                </div>
+                <div class="tech-stack">Python • Streamlit • NLP</div>
+                <div class="project-description">Built a web application that automatically summarizes Wikipedia articles using Natural Language Processing. Features adjustable summarization levels (30%, 50%, 70%) and user feedback integration for iterative improvement. Shipped as a production-ready application.</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+            
+            <div class="skill-category">
+                <strong>Languages:</strong> Java, Python, SQL
+            </div>
+            <div class="skill-category">
+                <strong>Frameworks:</strong> Spring Boot, Microservices Architecture, REST API Design
+            </div>
+            <div class="skill-category">
+                <strong>Cloud:</strong> AWS (EC2, S3, RDS, Lambda), Microsoft Azure, Google Cloud Platform
+            </div>
+            <div class="skill-category">
+                <strong>Security:</strong> Cisco Cybersecurity Certified, Input Validation, Data Encryption, Authentication/Authorization
+            </div>
+            <div class="skill-category">
+                <strong>Testing:</strong> JUnit, Mockito, SonarQube (70%+ coverage), Automated Testing
+            </div>
+            <div class="skill-category">
+                <strong>Monitoring:</strong> Docker, IntelliJ Debugging, SonarQube Analysis, Performance Optimization
+            </div>
+            <div class="skill-category">
+                <strong>Database:</strong> MySQL, PostgreSQL, Query Optimization, Schema Design
+            </div>
+            <div class="skill-category">
+                <strong>Tools:</strong> Git, GitLab, Jenkins, Maven, Postman, Jira, VS Code, IntelliJ IDEA
+            </div>
+        </section>
+
+        <section>
+            <h2>Certifications</h2>
+            
+            <ul>
+                <li>Cisco Networking Academy Introduction to Cybersecurity – Threat detection, defense mechanisms, network security fundamentals</li>
+                <li>AWS Educate Cloud Literacy Certification – Cloud deployment patterns across AWS, Azure, and GCP</li>
+                <li>NetApp Cloud Natives Training – Cloud-native architecture and scalability best practices</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>© 2024 Hashim Khan N. Built with focus on performance and clarity.</p>
+        </footer>
+    </div>
+</body>
+</html>
